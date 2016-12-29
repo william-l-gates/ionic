@@ -1,0 +1,42 @@
+<ion-view view-title="{{ 'evaluationTitle' | translate }} " name="order-view">
+
+    <ion-content class="padding" ng-class="{expanded:isExpanded}" class="slide-up">
+
+        <div class="row rating-box">
+            <div class="col-33">
+                <p>{{ 'evaluationRangeSpeed' | translate }}</p>
+            </div>
+            <div class="col-67">
+                <rating ng-model="evaluation.speed" max="5" class="evaluate-rating"></rating>
+            </div>
+        </div>
+
+        <div class="row rating-box">
+            <div class="col-33">
+                <p>{{ 'evaluationRangePrice' | translate }}</p>
+            </div>
+            <div class="col-67">
+                <rating ng-model="evaluation.price" max="5" class="evaluate-rating"></rating>
+            </div>
+        </div>
+
+        <div class="row rating-box">
+            <div class="col-33">
+                <p>{{ 'evaluationRangeNice' | translate }}</p>
+            </div>
+            <div class="col-67">
+                <rating ng-model="evaluation.nice" max="5" class="evaluate-rating"></rating>
+            </div>
+        </div>
+
+        <div class="padding">
+            <textarea placeholder="comments" ng-model="evaluation.comment" style="height:100px;width:100%;"></textarea>
+        </div>
+
+        <button class="button button-block button-positive" translate="evaluationButtonSend"
+                ng-click="evaluateDelivery(evaluation.OrderID, evaluation)">
+        </button>
+
+    </ion-content>
+
+</ion-view>

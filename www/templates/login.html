@@ -1,0 +1,28 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content>
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+            </div>
+        </div>
+
+        <div class="list">
+            <ion-md-input type="text" placeholder="{{ 'loginName' | translate }}" ng-model="user.user" hightlight-color="balanced"></ion-md-input>
+            <ion-md-input type="password" placeholder="{{ 'loginPassword' | translate }}" ng-model="user.pass" highlight-color="balanced"></ion-md-input>
+            <ion-checkbox ng-model="user.rememberUser">
+                <span class="input-label" translate="loginStore">Store</span>
+            </ion-checkbox>
+        </div>
+
+        <div class="padding">
+            <button class="button button-block button-positive" translate="loginButton" ng-click="login(user)">
+                Login
+            </button>
+            <br><br>
+            <button class="button button-block button-energized" translate="toRegisterButton"
+                    ui-sref="app.register"> Register new User
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

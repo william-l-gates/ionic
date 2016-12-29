@@ -1,0 +1,216 @@
+/* General
+==================================*/
+h1 {
+    color: #fff;
+    text-shadow: 0 1px 0px #000;
+    font-size: 42px;
+}
+
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #222;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../img/logo.png') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+
+
+.item-md-label {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.list {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.rating li {
+    float: left;
+    padding: 5px 2px !important;
+    font-size: 20px;
+}
+
+.rating {
+    color: #E5C800;
+    text-align: left;
+    padding-right: 7px;
+}
+
+.evaluate-rating li i {
+    font-size: 30px !important;
+}
+
+.rating-box {
+    padding: 0px;
+}
+
+.rating-box i {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.rating-box p {
+    margin-bottom: 0px;
+    line-height: 40px;
+}
+
+.order-item .card {
+    background-color: white !important;
+}
+
+
+.order-status {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    display: block;
+    top: 60px;
+    left: 60px;
+}
+
+.order-status.active {
+    background-color: #00B700;
+}
+
+.order-status.deactive {
+    background-color: #ffd50e;
+}
+
+
+.item-md-label input {
+    background-color: rgba(255, 255, 255, 0.6);
+    bottom: 0;
+    color: #292929;
+    letter-spacing: .25rem;
+    padding: 20px 10px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(90, 85, 85, 0.21);
+}
+
+.item-md-label .input-label {
+    color: #FFFFFF;
+}
+
+.item-md-label .input-label {
+    color: #B9B9B9;
+}
+
+.order-status-list {
+    margin-top: 20px;
+}
+
+.order-status-list .header .col {
+    background-color:lightgrey;
+}
+
+.order-status-list .col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.order-status-list .col:last-child {
+    border-right: solid 1px grey;
+}
+
+.order-status-list .row:last-child .col {
+    border-bottom: solid 1px grey;
+}
+
+.order-status-list .item.item-divider {
+    height: 30px;
+    min-height: 20px;
+    line-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #F5F5F5;
+}
+
+.order-status-list .item-icon-left .icon {
+    font-size: 20px;
+}
+
+.errors p {
+    font-size: 13px;
+    color: red;
+}
+
+.errors {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 10px !important;
+    background-color: #F5F5F5;
+}
+
+.registerForm .item {
+    border-bottom: 1px dotted #dfdfdf;
+}

@@ -1,0 +1,78 @@
+<ion-view view-title="{{ 'accountTitle' | translate }}">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" required placeholder="{{ 'registerFirstName' | translate }}"
+                       ng-model="address.FirstName">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" required placeholder="{{ 'registerLastName' | translate }}"
+                       ng-model="address.LastName">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerEmail' | translate }}" ng-model="address.Email">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerPass' | translate }}" ng-model="address.Password">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerPass2' | translate }}" ng-model="address.pass2">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerTel' | translate }}" ng-model="address.Telephone">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerCel' | translate }}" ng-model="address.Cellphone">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerCPF' | translate }}" ng-model="address.CPF">
+            </label>
+
+            <!-- Address data - currently no CEP lookup as only jQuery lite (Bruno) -->
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerCep' | translate }}" ng-model="address.CEP">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerStreet' | translate }}" ng-model="address.Street">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerNr' | translate }}" ng-model="address.Number">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerApp' | translate }}"
+                       ng-model="address.AppartmentNr">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerDist' | translate }}" ng-model="address.District">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerCity' | translate }}" ng-model="address.City">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{ 'registerState' | translate }}" ng-model="address.State">
+            </label>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+
+                <button class="button button-block button-energized" translate="registerButton"
+                        ng-click="register(address, false)" id="btn-save"> Modify existing User
+                </button>
+                <button class="button button-block button-assertive" translate="logoutButton" ng-click="logout()"> Log
+                    Out
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

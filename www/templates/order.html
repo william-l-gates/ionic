@@ -1,0 +1,57 @@
+<ion-view view-title="{{ 'orderTitle' | translate }}">
+
+    <ion-content ng-class="{expanded:isExpanded}">
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div class="list" style="margin-bottom: 0px; margin-top: 20px;">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    {{ 'selOrderBy' | translate }}
+                </div>
+                <select ng-model="orderType" ng-change="resortItems(orderType)">
+                    <option value="0">{{ 'selPrice' | translate }}</option>
+                    <option value="1">{{ 'selDeliveryTime' | translate }}</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="animate-fade-slide-in">
+            <div class="item card-item order-item" ng-repeat="item in items">
+                <div class="card stable-bg ink ink-dark">
+                    <div class="item item-avatar item-text-wrap">
+                        <span class="avatar" style="background-image: url('{{item.img}}');"></span>
+                        <div class="order-status" ng-class="item.Active == 1 ? 'active' : 'deactive'"></div>
+                        <strong>{{item.pri}} &nbsp {{item.curr}}</strong>&nbsp {{ 'orderItemDesc' | translate }} {{item.decr}}
+                        <div class="card-footer text-right">
+                            <div class="row rating-box">
+                                <div class="col-33" style="text-align: left;">
+                                    <p>{{ 'orderSupplierRating' | translate }}:</p>
+                                </div>
+                                <div class="col-67">
+                                    <rating ng-model="item.Rating" max="5" readonly="true"></rating>
+                                </div>
+                            </div>
+
+                            <p style="text-align: left;">
+                                {{ 'orderDeliveryTimeDesc1' | translate }} &nbsp {{item.delTime}} &nbsp {{ 'orderDeliveryTimeDesc2' | translate }}
+                            </p>
+
+                            <br/>
+
+                            <button class="button button-positive" translate="orderPlaceOrder" ng-click="placeOrder(item)">
+                                <i class="icon ion-ios-telephone"></i> <!-- Is there an easy way to align the button vertically? -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </ion-content>
+
+</ion-view>
